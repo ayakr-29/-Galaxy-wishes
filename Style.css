@@ -1,0 +1,245 @@
+*{
+marge:0;
+marge intérieure : 0 ;
+box-sizing:border-box;
+}
+corps{
+arrière-plan : dégradé linéaire (vers le bas,#050816,#120b3d,#1b1464) ;
+hauteur : 100vh ;
+débordement:masqué;
+police-family:Arial,sans-serif;
+affichage : flexible ;
+justifier-contenu:centre;
+aligner-éléments:centre;
+couleur : blanc ;
+}
+
+.récipient{
+text-align: centre;
+z-index:2;
+opacité : 1 ;
+transition: opacité 0,1s ease;
+}
+.container.hide{
+opacité : 0 ;
+événements de pointeur : aucun ;
+}
+h1{
+taille de police : 45 px ;
+marge inférieure : 20 px ;
+}
+p{
+taille de police : 20 px ;
+marge inférieure : 25 px ;
+}
+bouton{
+marge intérieure : 15px 35px ;
+taille de police : 20 px ;
+bordure : aucune ;
+bordure-radius:40px;
+arrière-plan : #7b5cff ;
+couleur : blanc ;
+curseur : pointeur ;
+transition:0,3s;
+}
+bouton:survol{
+transform:scale(1.1);
+}
+.commencer{
+position:fixe;
+largeur : 100 % ;
+hauteur : 100 % ;
+haut:0;
+gauche:0;
+débordement:masqué;
+z-index:1;
+}
+
+.étoile{
+nom-animation : scintillement, flottement ;
+position:absolute;
+couleur : blanc ;
+taille de police : 20 px ;
+}
+.étoile{
+position : absolue ;
+fond : blanc ;
+rayon de bordure : 50 % ;
+ombre portée : 0 0 8px blanc ;
+animation : scintillement 2s infini
+alterner,
+flotter 6s en douceur
+infini;
+}
+@keyframes twinkle{
+0%{
+opacité :0,3;
+transform:scale(0.8);
+}
+100%{
+opacité : 1 ;
+transform:scale(1.3);
+}
+}
+@keyframes float{
+0%{
+transformer:
+traduire(0px,0px);
+}
+25%{
+transformer:
+translate(2px,-4px);
+}
+50%{
+transformer:
+translate(-2px,-8px);
+}
+75%{
+transformer:
+translate(3px,-4px);
+}
+100%{
+transformer:
+traduire(0px,0px);
+}
+}
+#lune{
+position : fixe ;
+haut : 35px ;
+droite : 35px ;
+largeur : 90 px ;
+hauteur : 90px ;
+arrière-plan : dégradé radial (cercle à 30 % 30 %,
+#f3ead3 0%,
+#e3dfbf 40%,
+#ddd5b3 75%,
+#b7b091 100%);
+rayon de bordure : 50 % ;
+ombre portée :
+0 0 12px rgba(255,255,255,0.8),
+0 0 30px rgba(180,210,255,0.5),
+0 0 55px rgba(150,180,255,0.25);
+débordement : caché ;
+z-index:100;
+opacité : 0 ;
+transition: opacité 1,5s ease;
+}
+.étoile filante{
+position : fixe ;
+largeur : 9 px ;
+hauteur : 5px ;
+fond : blanc ;
+rayon de bordure : 50 % ;
+box-shadow: 0 0 10px blanc, 0 0 20px blanc;
+animation : tir linéaire vers l'avant pendant 3,0 secondes ;
+z-index: 9999;
+}
+@images clés prise de vue{
+0%{
+transformer : translate(0,0)
+échelle(1);
+opacité : 1 ;
+}
+100%{
+transformer:
+translate(-400px,400px)
+échelle(0,3);
+opacité : 0 ;
+}
+}
+#messageBox{
+position : fixe ;
+haut:0;
+gauche : 0 ;
+largeur : 100 % ;
+hauteur : 100 % ;
+affichage : flexible ;
+justifier-contenu : centre ;
+aligner les éléments : centrer ;
+arrière-plan : rgba(0,0,0,0.45);
+opacité : 0 ;
+visibilité : cachée ;
+z-index: 9999;
+transition : opacité 0,4s, accélération
+visibilité 0,4s facilité ;
+}
+.caché{
+affichage : aucun !important ;
+}
+.message-content{
+position : relative ;
+arrière-plan : rgba(255, 255, 255, 0,08);
+filtre d'arrière-plan : flou (18 px) ;
+-webkit-backdrop-filter: blur(18px);
+bordure : 1px solide rgba(255, 255, 255, 0,15);
+bordure-radius: 25px;
+largeur : 340px ;
+marge intérieure : 30 px ;
+text-align: centre;
+couleur : blanc ;
+box-shadow: 0 0 25px rgba(111,98,255,0.35);
+transform:scale(0.8)translateY(40px);
+transition: transform 0.45s ease;
+}
+.message-content h2{
+marge inférieure : 20px ;
+hauteur de ligne : 1,6 ;
+}
+#closeBtn{
+marge intérieure : 10px 25px ;
+bordure : aucune ;
+arrière-plan : #6b6cff ;
+couleur : blanc ;
+curseur : pointeur ;
+}
+#messageBox.show{
+opacité : 1 ;
+visibilité : visible ;
+}
+
+#messageBox.show .message-content
+{
+transformer:échelle(1)
+translateY(0);
+}
+@keyframes moonGlow{
+0%,100%{
+transformer:échelle(1);
+filtre:luminosité(1);
+}
+50%{
+transform:scale(1.04);
+filtre:luminosité(1,15);
+}
+}
+.cratère{
+position:absolute;
+rayon de bordure : 50 % ;
+arrière-plan : rgba(120,120,120,0.18);
+box-shadow:inset 1px 1px 2px rgba(255,255,255,0.25);
+}
+.cratère1{
+largeur : 12 px ;
+hauteur : 12px ;
+haut : 18px ;
+gauche : 22px ;
+}
+.cratère2{
+largeur : 8 px ;
+hauteur : 8px ;
+haut : 42px ;
+gauche : 18px ;
+}
+.cratère3{
+largeur : 10 px ;
+hauteur : 10px ;
+haut : 55px ;
+gauche : 45px ;
+}
+.cratère4{
+largeur : 6 px ;
+hauteur : 6px ;
+haut : 28px ;
+gauche : 58px ;
+  }
+  
