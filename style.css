@@ -1,0 +1,248 @@
+*{
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+}
+body{
+   background:linear-gradient(to bottom,#050816,#120b3d,#1b1464);
+   height:100vh;
+   overflow:hidden;
+   font-family:Arial,sans-serif;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   color:white;
+}
+
+.container{
+   text-align: center;
+   z-index:2;
+   opacity: 1;
+   transition: opacity 0.1s ease;
+}
+.container.hide{
+   opacity:0;
+   pointer-events: none;
+}
+h1{
+   font-size:45px;
+   margin-bottom:20px;
+}
+p{
+   font-size:20px;
+   margin-bottom:25px;
+}
+button{
+   padding:15px 35px;
+   font-size:20px;
+   border:none;
+   border-radius:40px;
+   background:#7b5cff;
+   color:white;
+   cursor:pointer;
+   transition:0.3s;
+}
+button:hover{
+   transform:scale(1.1);
+}
+.start{
+   position:fixed;
+   width:100%;
+   height:100%;
+   top:0;
+   left:0;
+   overflow:hidden;
+   z-index:1;
+}
+
+.star{
+   animation-name: twinkle, float;
+   position:absolute;
+   color:white;
+   font-size:20px;
+}
+.star{
+   position: absolute;
+   background:white;
+   border-radius:50%;
+   box-shadow:0 0 8px white;
+   animation: twinkle 2s infinite 
+   alternate,
+   float 6s ease-in-out
+   infinite;
+}
+@keyframes twinkle{
+   
+   0%{
+      opacity :0.3;
+      transform:scale(0.8);
+   }
+   100%{
+      opacity:1;
+      transform:scale(1.3);
+   }
+}
+@keyframes float{
+   0%{
+      transform:
+      translate(0px,0px);
+   }
+   25%{
+      transform:
+      translate(2px,-4px);
+   }
+   50%{
+      transform: 
+      translate(-2px,-8px);
+   }
+   75%{
+      transform:
+      translate(3px,-4px);
+   }
+   100%{
+      transform: 
+      translate(0px,0px);
+   }
+}
+   
+#moon{
+   position : fixed;
+   top: 35px;
+   right: 35px;
+   width: 90px;
+   height: 90px;
+   background: radial-gradient(circle at 30% 30%,
+      #f3ead3 0%,
+      #e3dfbf 40%,
+      #ddd5b3 75%,
+      #b7b091 100%);
+   border-radius: 50%;
+   box-shadow:
+   0 0 12px rgba(255,255,255,0.8),
+   0 0 30px rgba(180,210,255,0.5),
+   0 0 55px rgba(150,180,255,0.25);
+   overflow: hidden;
+   z-index:100;
+   opacity: 0;
+   transition: opacity 1,5s ease;
+   
+}
+.shooting-star{
+   position: fixed;
+   width: 9px;
+   height: 5px;
+   background: white;
+   border-radius: 50%;
+   box-shadow: 0 0 10px white, 0 0 20px white;
+   animation: shooting 3.0s linear forwards;
+   z-index: 9999;
+}
+@keyframes shooting{
+   0%{
+      transform: translate(0,0)
+      scale(1);
+      opacity: 1;
+   }
+   100%{
+      transform: 
+      translate(-400px,400px)
+      scale(0.3);
+      opacity: 0;
+   }
+}
+#messageBox{
+   position: fixed;
+   top:0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: rgba(0,0,0,0.45);
+   opacity: 0;
+   visibility: hidden;
+   z-index: 9999;
+   transition: opacity 0.4s ease,
+   visibility 0.4s ease;
+}
+.hidden{
+   display: none !important;
+}
+.message-content{
+   position:relative;
+   background: rgba(255, 255, 255, 0.08);
+   backdrop-filter: blur(18px);
+   -webkit-backdrop-filter: blur(18px);
+   border: 1px solid rgba(255, 255, 255, 0.15);
+   border-radius: 25px;
+   width: 340px;
+   padding: 30px;
+   text-align: center;
+   color: white;
+   box-shadow: 0 0 25px rgba(111,98,255,0.35);
+   transform:scale(0.8)translateY(40px);
+   transition: transform 0.45s ease;
+}
+.message-content h2{
+   margin-bottom: 20px;
+   line-height: 1.6;
+}
+#closeBtn{
+   padding: 10px 25px;
+   border: none;
+   background: #6b6cff;
+   color: white;
+   cursor: pointer;
+}
+#messageBox.show{
+opacity: 1;
+visibility: visible;
+}
+
+#messageBox.show .message-content
+{
+   transform:scale(1)
+   translateY(0);
+}
+@keyframes moonGlow{
+   0%,100%{
+      transform:scale(1); 
+      filter:brightness(1);
+   }
+   50%{
+      transform:scale(1.04);
+      filter:brightness(1.15);
+   }
+}
+.crater{
+   position:absolute;
+   border-radius:50%;
+   background:rgba(120,120,120,0.18);
+box-shadow:inset 1px 1px 2px rgba(255,255,255,0.25);
+}
+.crater1{
+   width: 12px;
+   height: 12px;
+   top: 18px;
+   left: 22px;
+}
+.crater2{
+   width: 8px;
+   height: 8px;
+   top: 42px;
+   left: 18px;
+}
+.crater3{
+   width: 10px;
+   height: 10px;
+   top: 55px;
+   left: 45px;
+}
+.crater4{
+   width: 6px;
+   height: 6px;
+   top: 28px;
+   left: 58px;
+  }
+  
