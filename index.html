@@ -1,31 +1,43 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport"
-contenu="largeur=largeur-de-l'appareil,
-échelle-initiale=1.0">
-<title>Souhaits galactiques</title>
-<link rel="stylesheet" href="style.css"> </head>
-<corps>
-<div id="ciel">
-<div id="moon"></div>
-<div id="shooting-stars"></div>
-<div id="stars"></div>
-<div class="container">
-<h1>Bienvenue dans le ciel nocturne</h1>
-<p>Cliquez pour commencer et recevoir les conseils d'une star.</p>
-<button id="startBtn">Démarrer</button></div>
-<div id="messageBox">
-<div class="message-content">
-<h2>✨ Galaxy Wish ✨</h2>
-<div class="divider">
-</div>
-<p id="wishText"></p>
-<button id="closeBtn">fermer</button>
-</div>
-</div>
-<script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galaxy Wishes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main id="sky">
+
+    <div id="moon">
+      <div class="crater crater1"></div>
+      <div class="crater crater2"></div>
+      <div class="crater crater3"></div>
+      <div class="crater crater4"></div>
+    </div>
+
+    <div id="shooting-stars"></div>
+    <div id="stars"></div>
+
+    <div class="container" id="welcome">
+      <h1>Welcome to the Night Sky</h1>
+      <p>Click Start to receive a star's advice.</p>
+      <button id="startBtn" type="button">Start</button>
+    </div>
+
+    <div id="messageBox" aria-hidden="true">
+      <div class="message-content">
+        <h2>✨ Galaxy Wish ✨</h2>
+        <div class="divider"></div>
+        <p id="wishText"></p>
+        <button id="closeBtn" type="button">Close</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="input.js"></script>
 </body>
-  </html>
-    
+      </html>
