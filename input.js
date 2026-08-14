@@ -1,5 +1,5 @@
   "use strict";
-
+alert("JS WORKS");
 const button = document.getElementById("startBtn");
 const stars = document.getElementById("stars");
 const shootingStars = document.getElementById("shooting-stars");
