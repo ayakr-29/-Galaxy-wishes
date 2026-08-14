@@ -1,4 +1,4 @@
-   * {
+ * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -373,14 +373,34 @@ button:active {
 
   background: #6b6cff;
 }
-
-/* Small screens */
+ /* Small screens */
 
 @media (max-width: 500px) {
+
+  .container {
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 32px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .container p {
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 22px;
+  }
+
+  .container button {
+    padding: 12px 28px;
+    font-size: 17px;
+  }
+
   #moon {
     width: 65px;
     height: 65px;
-
     top: 20px;
     right: 20px;
   }
@@ -406,9 +426,11 @@ button:active {
   }
 }
 
+
 /* Reduce animations on devices that request it */
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -416,4 +438,4 @@ button:active {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-   }
+  }
